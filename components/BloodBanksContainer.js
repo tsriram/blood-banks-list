@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import BloodBankActions from '../actions/BloodBankActions';
 import BloodBankStore from '../stores/BloodBankStore';
-import BloodBanksList from './BloodBanksList'
+import BloodBanksList from './BloodBanksList';
+import SearchBox from './SearchBox';
 
-export default class BloodBanks extends Component {
+export default class BloodBanksContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = BloodBankStore.getState();
@@ -42,10 +43,11 @@ export default class BloodBanks extends Component {
 
 		return (
 			<div>
-				<BloodBanksList bloodbanks={this.state.bloodBanks} />
+				<SearchBox />
+				<BloodBanksList bloodbanks={this.state.bloodBanks} q={this.state.q} />
 			</div>
 		);
 	}
 }
 
-BloodBanks.displayName = 'BloodBanks';
+BloodBanksContainer.displayName = 'BloodBanksContainer';
