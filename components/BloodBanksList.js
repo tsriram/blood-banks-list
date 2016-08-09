@@ -13,7 +13,15 @@ export default class BloodBanksList extends Component{
 				return bloodbank.pincode === this.props.q;
 			});
 		}else {
-			bloodbanks = this.props.bloodbanks;
+			return (
+				<div>Enter a search query to see blood bank list!</div>
+			);
+		}
+
+		if(!bloodbanks.length) {
+			return (
+				<div>No bloodbank for query - {this.props.q}</div>
+			);
 		}
 
 		return (
