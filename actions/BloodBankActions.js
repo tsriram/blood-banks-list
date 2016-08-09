@@ -24,6 +24,10 @@ class BloodBankActions {
 	bloodBanksFailed(errorMessage) {
 		return errorMessage;
 	}
+
+	filterBloodBanks(q) {
+		return q;
+	}
 }
 
 export default alt.createActions(BloodBankActions);

@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BloodBanks from './components/BloodBanks';
+import BloodBanksContainer from './components/BloodBanksContainer';
+
+import './assets/sass/main.scss';
 
 document.addEventListener('DOMContentLoaded', function () {
-  let appElement = document.getElementById('app');
+  let appElement = document.getElementById('bloodbanks');
   let classNames = appElement.className;
-  ReactDOM.render(<BloodBanks />, appElement);
+  ReactDOM.render(<BloodBanksContainer />, appElement);
 });
