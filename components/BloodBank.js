@@ -45,8 +45,8 @@ export default class BloodBank extends Component{
 		}
 
 		return (
-			<div>
-			
+			<div className='bloodbank'>
+
 				<div className='header'>
 					{city}
 					{dist}
