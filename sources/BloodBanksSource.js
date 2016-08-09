@@ -4,7 +4,6 @@ export function fetchBloodBanks() {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
             if(xhr.readyState === XMLHttpRequest.DONE){
-                console.log(xhr.status);
                 if(xhr.status === 200){
                     resolve(JSON.parse(xhr.responseText));
                 }
