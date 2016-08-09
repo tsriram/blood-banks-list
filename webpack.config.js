@@ -3,7 +3,6 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	// context: path.join(__dirname, './assets'),
 
 	entry: {
 		app: [
@@ -38,6 +37,6 @@ module.exports = {
 	plugins: [
 		new webpack.NoErrorsPlugin(),
 
-		new ExtractTextPlugin('../css/[name].css', { allChunks: false })
+		new ExtractTextPlugin('../css/bloodbanks.css', { allChunks: false })
 	]
 }
