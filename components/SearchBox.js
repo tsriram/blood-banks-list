@@ -12,10 +12,10 @@ export default class SearchBox extends Component{
 	}
 
 	render(){
+		let placeholder = 'Enter PIN code / City / District / State / Hospital name to search';
 		return (
 			<div>
-				<input name='q' id='q' onChange={this.filterBloodBanks.bind(this)} />
-				<button name='search'>Search</button>
+				<input name='bbq' className='bb-q' placeholder={placeholder} id='bbq' onChange={this.filterBloodBanks.bind(this)} />
 			</div>
 		)
 	}
