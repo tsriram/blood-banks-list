@@ -42,7 +42,7 @@ export default class BloodBanksContainer extends Component {
 		}
 
 		return (
-			<div>
+			<div className='bb-container'>
 				<SearchBox />
 				<BloodBanksList bloodbanks={this.state.bloodBanks} q={this.state.q} />
 			</div>

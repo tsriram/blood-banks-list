@@ -11,59 +11,67 @@ export default class BloodBank extends Component{
 		let bloodbank = this.props.bloodbank;
 
 		if(bloodbank.city && bloodbank.city !== 'NA') {
-			city = <span className='city'>{bloodbank.city}</span>
+			city = <span className='bb-city'>{bloodbank.city}, </span>
 		}
 		if(bloodbank.dist && bloodbank.dist !== 'NA') {
-			dist = <span className='dist'>{bloodbank.district}</span>
+			dist = <span className='bb-dist'>{bloodbank.district}, </span>
 		}
 		if(bloodbank.state && bloodbank.state !== 'NA') {
-			state = <span className='state'>{bloodbank.state}</span>
+			state = <span className='bb-state'>{bloodbank.state}</span>
 		}
 		if(bloodbank.contact && bloodbank.contact !== 'NA') {
-			contact = <span className='contact'>{bloodbank.contact}</span>
+			contact = <div className='bb-contact'><span className='bb-label'>Contact: </span>{bloodbank.contact}</div>
 		}
 		if(bloodbank.helpline && bloodbank.helpline !== 'NA') {
-			helpline = <span className='helpline'>{bloodbank.helpline}</span>
+			helpline = <div className='bb-helpline'><span className='bb-label'>Helpline: </span>{bloodbank.helpline}</div>
 		}
 		if(bloodbank.h_name && bloodbank.h_name !== 'NA') {
-			h_name = <div className='h_name'>{bloodbank.h_name}</div>
+			h_name = <div className='bb-h_name'>{bloodbank.h_name}</div>
 		}
 		if(bloodbank.address && bloodbank.address !== 'NA') {
-			address = <span className='address'>{bloodbank.address}</span>
+			address = <span className='bb-address'>{bloodbank.address}</span>
 		}
 		if(bloodbank.pincode && bloodbank.pincode !== 'NA') {
-			pincode = <span className='pincode'>{bloodbank.pincode}</span>
+			pincode = <span className='bb-pincode'> - {bloodbank.pincode}</span>
 		}
 		if(bloodbank.category && bloodbank.category !== 'NA') {
-			category = <span className='category'>{bloodbank.category}</span>
+			category = <span className='bb-category'>({bloodbank.category})</span>
 		}
 		if(bloodbank.email && bloodbank.email !== 'NA') {
-			email = <span className='email'>{bloodbank.email}</span>
+			email = <span className='bb-email'>{bloodbank.email}</span>
 		}
 		if(bloodbank.web && bloodbank.web !== 'NA') {
-			web = <span className='web'>{bloodbank.web}</span>
+			web = <span className='bb-web'>{bloodbank.web}</span>
 		}
 
 		return (
-			<div className='bloodbank'>
+			<div className='bb'>
 
-				<div className='header'>
+				<div className='bb-header bb-row bold'>
 					{city}
 					{dist}
 					{state}
 				</div>
 
-				<div className='contact'>
-					Contact: {contact} | Helpline: {helpline}
+				<div className='bb-row'>
+					{contact}
 				</div>
 
-				<div className='addressBlock'>
-					{h_name} ({category})
-					{address} - {pincode}
+				<div className='bb-row'>
+					{helpline}
 				</div>
 
-				<div className='online'>
-					{web} | {email}
+				<div className='bb-row bb-address-block'>
+					{h_name} {category}
+					{address}	{pincode}
+				</div>
+
+				<div className='bb-row'>
+					{email}
+				</div>
+
+				<div className='bb-row'>
+					{web}
 				</div>
 
 			</div>
