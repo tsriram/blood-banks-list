@@ -37,6 +37,12 @@ module.exports = {
 	plugins: [
 		new webpack.NoErrorsPlugin(),
 
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		}),
+
 		new ExtractTextPlugin('../css/bloodbanks.css', { allChunks: false })
 	]
 }
