@@ -10,8 +10,7 @@ class BloodBankActions {
 	}
 
 	fetchBloodBanks() {
-		// console.log('fetchBloodBanks', BloodBanksSource);
-		let indexKeys = ['city', 'dist', 'state', 'pincode'];
+		let indexKeys = ['city', 'pincode'];
 		let skipValue = 'NA';
 		return (dispatch) => {
 			dispatch();
