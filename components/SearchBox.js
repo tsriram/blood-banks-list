@@ -7,12 +7,11 @@ export default class SearchBox extends Component{
 	}
 
 	filterBloodBanks(e) {
-		console.log('filterBloodBanks...', e.target.value);
 		BloodBankActions.filterBloodBanks(e.target.value);
 	}
 
 	render(){
-		let placeholder = 'Enter PIN code / City / District / State to search';
+		let placeholder = 'Enter PIN code or city name to search';
 		return (
 			<div>
 				<input name='bbq' className='bb-q' placeholder={placeholder} id='bbq' onChange={this.filterBloodBanks.bind(this)} />
