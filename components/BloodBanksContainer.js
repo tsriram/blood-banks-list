@@ -41,10 +41,34 @@ export default class BloodBanksContainer extends Component {
 			);
 		}
 
+		var filteredBloodbanks = [];
+
+		if(this.state.q.length > 2) {
+			filteredBloodbanks = this.state.bloodBanks.filter((bloodbank) => {
+				return bloodbank._index && bloodbank._index.indexOf(this.state.q) !== -1;
+			});
+		}else {
+			return (
+				<div className='bb-container'>
+					<SearchBox />
+					<div className='bb'>Enter at least 3 characters to see blood bank list!</div>
+				</div>
+			);
+		}
+
+		if(!filteredBloodbanks.length) {
+			return (
+				<div className='bb-container'>
+					<SearchBox />
+					<div className='bb'>No bloodbank for query - {this.state.q}</div>
+				</div>
+			);
+		}
+
 		return (
 			<div className='bb-container'>
 				<SearchBox />
-				<BloodBanksList bloodbanks={this.state.bloodBanks} q={this.state.q} />
+				<BloodBanksList bloodbanks={filteredBloodbanks} />
 			</div>
 		);
 	}
