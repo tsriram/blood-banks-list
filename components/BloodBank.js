@@ -29,10 +29,10 @@ export default class BloodBank extends Component{
 			h_name = <div className='bb-h_name'>{bloodbank.h_name}</div>
 		}
 		if(bloodbank.address && bloodbank.address !== 'NA') {
-			address = <span className='bb-address'>{bloodbank.address}</span>
+			address = <span className='bb-address'>{bloodbank.address} - </span>
 		}
 		if(bloodbank.pincode && bloodbank.pincode !== 'NA') {
-			pincode = <span className='bb-pincode'> - {bloodbank.pincode}</span>
+			pincode = <span className='bb-pincode'>{bloodbank.pincode}</span>
 		}
 		if(bloodbank.category && bloodbank.category !== 'NA') {
 			category = <span className='bb-category'>({bloodbank.category})</span>
