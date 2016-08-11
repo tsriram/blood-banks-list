@@ -43,6 +43,13 @@ module.exports = {
 			}
 		}),
 
+    // this uses React's production build
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+
 		new ExtractTextPlugin('../css/bloodbanks.css', { allChunks: false })
 	]
 }
