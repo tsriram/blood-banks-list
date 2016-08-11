@@ -1,6 +1,6 @@
 export function fetchBloodBanks() {
     return new Promise(function(resolve, reject) {
-        const BLOOD_BANKS_JSON_URL = 'http://localhost:8000/bloodbanks.json';
+        const BLOOD_BANKS_JSON_URL = 'https://cdn.rawgit.com/tsriram/blood-banks-list/master/data/bloodbanks.json';
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
             if(xhr.readyState === XMLHttpRequest.DONE){

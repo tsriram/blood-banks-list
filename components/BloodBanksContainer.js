@@ -41,7 +41,7 @@ export default class BloodBanksContainer extends Component {
 			return (
 				<div className='bb-container'>
 					<div className='bb-loader'>
-						<img src="loader.gif" />
+						<img src="https://cdn.rawgit.com/tsriram/blood-banks-list/master/assets/img/loader.gif" />
 						<div>Loading...</div>
 					</div>
 				</div>
