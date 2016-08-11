@@ -29,14 +29,21 @@ export default class BloodBanksContainer extends Component {
 	render() {
 		if(this.state.errorMessage) {
 			return (
-				<div>Something went wrong!</div>
+				<div className='bb-container'>
+					<div className='bb-error'>
+						Something went wrong! Please try again later.
+					</div>
+				</div>
 			);
 		}
 
 		if(!this.state.bloodBanks.length) {
 			return (
-				<div>
-					<img src="loader.gif" />
+				<div className='bb-container'>
+					<div className='bb-loader'>
+						<img src="loader.gif" />
+						<div>Loading...</div>
+					</div>
 				</div>
 			);
 		}

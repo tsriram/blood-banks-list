@@ -39,3 +39,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 	box-sizing: border-box;
 	padding: 5px;
 }
+
+.bb-error, .bb-loader {
+	text-align: center;
+}
