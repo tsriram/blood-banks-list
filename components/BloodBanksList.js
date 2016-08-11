@@ -8,13 +8,13 @@ export default class BloodBanksList extends Component{
 
 	render(){
 		var bloodbanks = [];
-		if(this.props.q.length) {
+		if(this.props.q.length > 2) {
 			bloodbanks = this.props.bloodbanks.filter((bloodbank) => {
-				return bloodbank.pincode === this.props.q;
+				return bloodbank._index && bloodbank._index.indexOf(this.props.q) !== -1;
 			});
 		}else {
 			return (
-				<div>Enter a search query to see blood bank list!</div>
+				<div>Enter at least 3 characters to see blood bank list!</div>
 			);
 		}
 
